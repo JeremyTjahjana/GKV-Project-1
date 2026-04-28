@@ -18,7 +18,7 @@ GKV-Project-1/
 
 ## 🚀 Cara Menjalankan Proyek
 
-1. **Pastikan file `vgsales.csv` ada di folder proyek**
+1. **Pastikan file `vgsales.csv` ada di folder proyek (KALAU ADA GAUSAH DIBWH INI, UDH ADA CSVNYA KOK)**
    - Download dari Kaggle: [Video Game Sales Dataset](https://www.kaggle.com/datasets/gregorut/videogamesales)
    - Atau gunakan Kaggle CLI:
      ```bash
@@ -229,65 +229,7 @@ Plotly.d3.csv("vgsales.csv", function (err, rows) {
 
 ---
 
-## 🔧 Tips & Trik
-
-### **1. Filter Data Tertentu**
-
-```javascript
-// Filter game hanya dari tahun 2000 ke atas
-const filteredRows = rows.filter((row) => parseFloat(row.Year) >= 2000);
-```
-
-### **2. Parsing Angka dengan Aman**
-
-```javascript
-// Jangan lupa parseFloat() karena CSV membaca semua sebagai string
-const sales = parseFloat(row.Global_Sales) || 0;
-```
-
-### **3. Format Angka dengan 2 Desimal**
-
-```javascript
-const formatted = sales.toFixed(2); // 3.50
-```
-
-### **4. Urutkan Data**
-
-```javascript
-// Descending (terbesar ke terkecil)
-array.sort((a, b) => b.value - a.value);
-```
-
-### **5. Debugging di Browser**
-
-- Buka **F12** → **Console** untuk melihat error
-- Gunakan `console.log()` untuk debug
-
----
-
 ## 📚 Referensi Plotly.js
 
 - [Dokumentasi Plotly.js](https://plotly.com/javascript/)
 - [Tipe-tipe Chart](https://plotly.com/javascript/): scatter, bar, pie, histogram, dll.
-
----
-
-## 👥 Kontribusi
-
-1. Buat file JS baru untuk grafik Anda
-2. Tambahkan section di `index.html`
-3. Reference script di bagian `</body>`
-4. Test di browser
-
----
-
-## 📝 Catatan Penting
-
-- **File `vgsales.csv` harus ada** di folder yang sama dengan `index.html`
-- Gunakan **Live Server** untuk menghindari CORS error
-- Data CSV dibaca secara **synchronous** (mungkin lambat untuk file besar)
-- Pastikan **ID elemen HTML sesuai** dengan variabel JavaScript (`getElementById()`)
-
----
-
-Selamat menambahkan grafik baru! 🎉
