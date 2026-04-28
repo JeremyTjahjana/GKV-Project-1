@@ -7,26 +7,30 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <style>
         body { font-family: sans-serif; margin: 20px; background-color: #f4f4f4; }
-        #line_chart { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
     <h1>Analisis Data Video Game (Kaggle)</h1>
 
-    //BUAT SECTION MASING2!!
+    <!-- BUAT SECTION MASING2!! -->
     <section>
         <p>Grafik di bawah menunjukkan tren jumlah rilis video game per tahun.</p>
-    
-    <div id="line_chart"></div>
+        <div id="line_chart"></div>
     </section>
     
     <section>
-        <p>Grafik di bawah menunjukkan ...</p>
-    
-    <div id="xxx-chart"></div>
+        <p>Grafik di bawah menunjukkan total penjualan per region untuk setiap genre game.</p>
+        <div id="region-chart"></div>
     </section>
-    
 
     <script src="gamepertahun.js"></script> 
+    <script src="RegionalSales.js"></script>
 </body>
 </html>
