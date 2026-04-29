@@ -25,22 +25,29 @@
     <script src="RegionalSales.js"></script>
 
     <section>
-        <p>Grafik di bawah menunjukkan genre game terpopuler berdasarkan total penjualan global.</p>
+        <p>Grafik di bawah menunjukkan distribusi genre game berdasarkan total penjualan global.</p>
         <div id="genre-chart"></div>
     </section>
     
     <script src="GenrePopuler.js"></script>
 
-    <section>
-        <h2>Sales Efficiency vs Volume</h2>
-        <p>
-            Grafik ini menampilkan hubungan antara jumlah game yang dirilis oleh setiap publisher 
-            (sumbu X) dan rata-rata penjualan per game (sumbu Y). Setiap titik merepresentasikan 
-            satu publisher, dengan ukuran titik menunjukkan total penjualan global. Grafik ini 
-            digunakan untuk mengeksplorasi distribusi volume produksi dan performa penjualan 
-            antar publisher.
-        </p>
-        <div id="publisher-scatter"></div>
+    <section style="background: linear-gradient(135deg, #ffffff 0%, #f7fbff 100%); border: 1px solid #e4edf7;">
+        <div style="display: flex; justify-content: space-between; gap: 18px; align-items: flex-start; flex-wrap: wrap; margin-bottom: 14px;">
+            <div style="max-width: 760px;">
+                <h2 style="margin: 0 0 8px; color: #172033;">Sales Efficiency vs Volume</h2>
+                <p style="margin: 0; color: #536174; line-height: 1.6;">
+                    Grafik ini membandingkan jumlah game yang dirilis oleh setiap publisher dengan
+                    rata-rata penjualan per game. Ukuran dan warna bubble menunjukkan total
+                    penjualan global, sehingga publisher yang produktif dan efisien lebih mudah
+                    terlihat.
+                </p>
+            </div>
+            <div id="publisher-summary" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end;"></div>
+        </div>
+        <div style="background: #ffffff; border: 1px solid #edf2f7; border-radius: 8px; padding: 8px;">
+            <div id="publisher-scatter" style="width: 100%; min-height: 520px;"></div>
+        </div>
+        <p id="publisher-note" style="margin: 12px 0 0; color: #667085; font-size: 13px;"></p>
     </section>
     <script src="publisher.js"></script>
 
